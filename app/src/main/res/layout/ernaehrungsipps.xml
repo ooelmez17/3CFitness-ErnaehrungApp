@@ -13,7 +13,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Ernährungstipps"
+        android:text=" Ernährungstipps"
         android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="30dp"

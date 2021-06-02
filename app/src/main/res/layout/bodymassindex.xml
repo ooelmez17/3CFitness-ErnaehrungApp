@@ -1,21 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+
+    android:background="#000000"
+    android:orientation="vertical"
     >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textviewtitle2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="BODY MASS INDEX"
+        android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textAlignment="center"
-        android:textSize="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:textSize="24dp"
+        android:text="BMI BERECHNEN"
         android:background="@color/white"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/leerzeile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:text=""
+
+        android:gravity="center_horizontal" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textviewgeschlecht"
+            android:layout_marginTop="8dp"
+            android:layout_width="197dp"
+            android:layout_height="40dp"
+            android:hint="Was hast du gegessen?"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="100dp"
+            android:background="#FFFFFF"
+            android:textColor="@color/black"
+            android:text="Geschlecht:"
+            android:textSize="20dp"
+            android:textColorHint="#636363"
+
+
+          />
+        <CheckBox
+            android:id="@+id/checkBoxMaennlich"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:shadowColor="@color/white"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/textviewgeschlecht"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="-50dp"
+
+
+            />
+        <CheckBox
+            android:id="@+id/checkBoxWeiblich"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:shadowColor="@color/white"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/checkBoxMaennlich"
+
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/leerzeile2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:text=""
+
+        android:gravity="center_horizontal" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/edittextgewicht"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:text="Gewicht:"
+        android:textColor="@color/black"
+
         />
 
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/leerzeile3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:text=""
+
+        android:gravity="center_horizontal" />
+
+
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/edittextgroeße"
+        android:layout_marginLeft="16dp"
+        android:background="@color/white"
+        android:text="Größe in cm:"
+        android:textColor="@color/black"
+        />
+
+
+
+    <TextView
+        android:id="@+id/leerzeile4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:text=""
+
+        android:gravity="center_horizontal" />
+
+
+
+    <Button
+        android:id="@+id/buttonbmiberechnen"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:text="BMI berechnen"
+
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        >
+        <TextView
+            android:id="@+id/textviewergebniss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="70dp"
+            android:textAlignment="center"
+            android:gravity="center"
+
+
+            android:layout_centerVertical="true"
+
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

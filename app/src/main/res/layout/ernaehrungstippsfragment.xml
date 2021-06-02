@@ -10,34 +10,35 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textviewtitle4"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text=" Ernährungstipps"
+        android:text="Ernährungstipps"
         android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+
         android:background="@color/white"
         />
 
-    <TextView
-        android:id="@+id/textView2"
+    <fragment
+        android:id="@+id/textViewfragment"
         android:layout_width="340dp"
 
         android:layout_height="550dp"
-        android:text="TextView"
+        android:text=""
         android:background="@color/white"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:name="htl.gkr.a3cfitness_ernaehrungapp.ernaehrungstippsfragment"
+        />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView2"
-
-
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textViewfragment"
+        android:layout_alignParentEnd="true"
         android:layout_marginRight="5dp"
         app:srcCompat="@drawable/gluehbirne" />
 </RelativeLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,13 +12,13 @@
     >
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textviewtitle6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="24dp"
-        android:text=" Kalorienbedarf "
+        android:text="KALORIENBEDARF "
         android:background="@color/white"
         android:gravity="center_horizontal" />
 
@@ -27,8 +27,8 @@
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
-    <EditText
-        android:id="@+id/textView1"
+    <TextView
+        android:id="@+id/edittextinfo"
         android:layout_marginTop="8dp"
         android:layout_width="150dp"
         android:layout_height="40dp"
@@ -37,36 +37,38 @@
         android:layout_marginRight="100dp"
         android:background="#FFFFFF"
         android:text="Geschlecht:"
-        android:textColorHint="#636363"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textColorHint="@color/black"
 
 
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="230dp" />
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBoxMaennlich"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="M"
         android:shadowColor="@color/white"
         android:textColor="@color/white"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/edittextinfo"
         android:layout_marginRight="30dp"
 
 
         />
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkBoxWeiblich"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="W"
         android:shadowColor="@color/white"
         android:textColor="@color/white"
-        android:layout_toRightOf="@+id/checkBox"
+        android:layout_toRightOf="@+id/checkBoxMaennlich"
 
         />
 </RelativeLayout>
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/leerzeile2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -78,7 +80,7 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:id="@+id/in_date"
+        android:id="@+id/edittextgewicht"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="5dp"
         android:background="@color/white"
@@ -88,7 +90,7 @@
 
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/leerzeile3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -103,7 +105,7 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:id="@+id/in_time"
+        android:id="@+id/edittextgroeße"
         android:layout_marginLeft="16dp"
         android:background="@color/white"
         android:text="Gewicht:"
@@ -112,7 +114,7 @@
 
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/leerzeile4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -125,7 +127,7 @@
 
 
     <EditText
-        android:id="@+id/textView2"
+        android:id="@+id/edittextgroeße2"
         android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -140,7 +142,7 @@
         />
 
     <Button
-        android:id="@+id/buttonhinzufügen"
+        android:id="@+id/buttonbmiberechnen"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="@color/white"
@@ -156,7 +158,7 @@ android:layout_marginTop="10dp"
 
         >
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textviewergebniss"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Kalorienanzahl lautet:"

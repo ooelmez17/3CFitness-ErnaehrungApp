@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textviewtitle6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -23,7 +23,7 @@
 
 
     <EditText
-        android:id="@+id/textView1"
+        android:id="@+id/edittextinfo"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -32,7 +32,8 @@ android:hint="Was hast du gegessen?"
         android:layout_marginRight="100dp"
         android:background="#FFFFFF"
         android:text=""
-        android:textColorHint="#636363"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
 
 
         tools:layout_editor_absoluteX="16dp"
@@ -41,7 +42,7 @@ android:hint="Was hast du gegessen?"
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/in_date"
+        android:id="@+id/edittextgewicht"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="5dp"
         android:background="@color/white"
@@ -60,7 +61,7 @@ android:hint="Was hast du gegessen?"
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/in_time"
+        android:id="@+id/edittextgroeße"
         android:layout_marginLeft="16dp"
         android:background="@color/white"
      />
@@ -79,13 +80,13 @@ android:hint="Was hast du gegessen?"
 
 
     <EditText
-        android:id="@+id/textView2"
+        android:id="@+id/edittextkalorien"
         android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text=""
-        android:hint="Kalorien eingeben"
-        android:textColorHint="#636363"
+        android:hint="Kalorien eingeben:"
+        android:textColorHint="@color/black"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:background="#FFFFFF"
@@ -94,9 +95,9 @@ android:hint="Was hast du gegessen?"
       />
 
     <Button
-        android:id="@+id/buttonhinzufügen"
+        android:id="@+id/buttonhinufuegen"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
 android:backgroundTint="@color/white"
         android:textColor="@color/black"
 
@@ -124,7 +125,7 @@ android:backgroundTint="@color/white"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="302dp" />
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textviewergenis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"

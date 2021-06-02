@@ -85,7 +85,7 @@
         android:layout_marginTop="5dp"
         android:background="@color/white"
         android:text="Alter:"
-
+android:inputType="number"
         />
 
 
@@ -142,7 +142,7 @@
         />
 
     <Button
-        android:id="@+id/buttonbmiberechnen"
+        android:id="@+id/buttontagesbedarfberechnen"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="@color/white"
@@ -157,19 +157,20 @@ android:layout_marginTop="10dp"
 
 
         >
+
         <TextView
-            android:id="@+id/textviewergebniss"
+            android:id="@+id/textviewergebnisskalorienbedarf"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Kalorienanzahl lautet:"
-            android:textSize="70dp"
-            android:textAlignment="center"
+            android:layout_centerVertical="true"
             android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
 
 
-         android:layout_centerVertical="true"
+            android:textColor="@color/white"
 
-            android:textColor="@color/white"/>
+            android:textSize="70dp" />
 
     </RelativeLayout>
 

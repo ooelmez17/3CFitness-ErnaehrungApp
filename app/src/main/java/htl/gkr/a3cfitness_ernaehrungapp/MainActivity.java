@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button traininhinzufuegen;
     Button ernaehrung;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

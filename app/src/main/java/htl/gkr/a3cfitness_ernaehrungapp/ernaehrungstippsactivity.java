@@ -25,7 +25,7 @@ public class ernaehrungstippsactivity extends AppCompatActivity
         listtipps.add("Achte auf eine ausgewogene Ernährung");
         listtipps.add("Um Muskel aufzubauen, musst du im Kalorienüberschuss sein");
         listtipps.add("Berechne deinen Tagesbedarf, um genau deinen Kalorienbedarf zu wissen");
-        listtipps.add("Ernähre dich auswechselreich");
+        listtipps.add("Ernähre dich abwechslungsreich");
         listtipps.add("Übertreibe nicht das Konsum von Süssigkeiten und Fleisch");
     }
 }

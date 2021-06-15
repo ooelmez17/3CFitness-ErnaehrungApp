@@ -22,10 +22,10 @@ public class ernaehrungstippsactivity extends AppCompatActivity
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,listtipps);
         listViewtipps.setAdapter(adapter);
         listtipps.add("*Ernährung ist wichtiger als Training");
-        listtipps.add("Achte auf eine ausgewogene Ernährung");
-        listtipps.add("Um Muskel aufzubauen, musst du im Kalorienüberschuss sein");
-        listtipps.add("Berechne deinen Tagesbedarf, um genau deinen Kalorienbedarf zu wissen");
-        listtipps.add("Ernähre dich abwechslungsreich");
-        listtipps.add("Übertreibe nicht das Konsum von Süssigkeiten und Fleisch");
+        listtipps.add("*Achte auf eine ausgewogene Ernährung");
+        listtipps.add("*Um Muskel aufzubauen, musst du im Kalorienüberschuss sein");
+        listtipps.add("*Berechne deinen Tagesbedarf, um genau deinen Kalorienbedarf zu wissen");
+        listtipps.add("*Ernähre dich abwechslungsreich");
+        listtipps.add("*Übertreibe nicht das Konsum von Süssigkeiten und Fleisch");
     }
 }

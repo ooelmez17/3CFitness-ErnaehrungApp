@@ -88,11 +88,12 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:id="@+id/edittextgewicht"
+        android:id="@+id/edittextgewichtbmi"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="5dp"
         android:background="@color/white"
         android:text="Gewicht:"
+
         android:textColor="@color/black"
 
         />
@@ -114,7 +115,7 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:id="@+id/edittextgroeße"
+        android:id="@+id/edittextgroeßebmi"
         android:layout_marginLeft="16dp"
         android:background="@color/white"
         android:text="Größe in cm:"
@@ -153,7 +154,7 @@
 
         >
         <TextView
-            android:id="@+id/textviewergebniss"
+            android:id="@+id/textviewergebnissbmi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text=""

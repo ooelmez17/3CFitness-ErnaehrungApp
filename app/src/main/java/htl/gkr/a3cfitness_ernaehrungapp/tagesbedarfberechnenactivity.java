@@ -13,7 +13,7 @@ public class tagesbedarfberechnenactivity extends AppCompatActivity
     EditText alter;
     EditText gewicht;
     EditText groeße;
-    Button tagesbedarfberechnen;
+    Button tagesbedarfberechnenbutton;
     TextView textviewergebnissbmi;
    String alterzahl;
     int gewichtzahl;
@@ -23,14 +23,13 @@ public class tagesbedarfberechnenactivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tagesbedarfberechnen);
-       EditText alter =  (EditText) findViewById(R.id.edittextgewicht);
-       EditText gewicht = (EditText) findViewById(R.id.edittextgewicht);
-       EditText groeße = (EditText)findViewById(R.id.edittextgroeße2);
+
     //  String  alterzahl = alter.getText().toString();
-       tagesbedarfberechnen = findViewById(R.id.buttontagesbedarfberechnen);
+       tagesbedarfberechnenbutton =(Button) findViewById(R.id.buttontagesbedarfberechnen);
+
        textviewergebnissbmi = (TextView) findViewById(R.id.textviewergebnisskalorienbedarf);
 
-        alterzahl = alter.getText().toString();
+
 
 
 
@@ -39,11 +38,16 @@ public class tagesbedarfberechnenactivity extends AppCompatActivity
 
 
 
-        tagesbedarfberechnen.setOnClickListener(new View.OnClickListener() {
+        tagesbedarfberechnenbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                textviewergebnissbmi.setText(Integer.parseInt(alterzahl));
+                alter =  (EditText) findViewById(R.id.edittextgewicht);
+                 gewicht = (EditText) findViewById(R.id.edittextgewicht);
+                 groeße = (EditText)findViewById(R.id.edittextgroeße2);
+                 int alterzahl= Integer.parseInt(alter.getText().toString());
+                 int gew = Integer.parseInt(gewicht.getText().toString());
+                 int groeß = Integer.parseInt(groeße.getText().toString());
             }
         });
     }

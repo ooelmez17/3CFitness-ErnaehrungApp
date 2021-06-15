@@ -20,13 +20,20 @@ public class bodymassindexactivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bodymassindex);
+        bmiberechnen =(Button) findViewById(R.id.buttonbmiberechnen);
+        textviewergebnissbmi=(TextView) findViewById(R.id.textviewergebnissbmi);
 
-        gewicht = findViewById(R.id.edittextgewicht);
-        groeße= findViewById(R.id.edittextgroeße);
         bmiberechnen.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                textviewergebnissbmi.setText("...");
+                gewicht = (EditText) findViewById(R.id.edittextgewichtbmi);
+                groeße= (EditText) findViewById(R.id.edittextgroeßebmi);
+                int gew = Integer.parseInt(gewicht.getText().toString());
+                int groeß = Integer.parseInt(groeße.getText().toString());
+                int bmiwert = gew / (groeß *  groeß);
+                String erg = String.valueOf(bmiwert);
+                textviewergebnissbmi.setText("BMI= "+erg);
             }
         });
     }

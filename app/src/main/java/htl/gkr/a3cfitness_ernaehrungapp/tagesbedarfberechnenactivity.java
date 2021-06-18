@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class tagesbedarfberechnenactivity extends AppCompatActivity
@@ -23,6 +24,8 @@ public class tagesbedarfberechnenactivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tagesbedarfberechnen);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
     //  String  alterzahl = alter.getText().toString();
        tagesbedarfberechnenbutton =(Button) findViewById(R.id.buttontagesbedarfberechnen);

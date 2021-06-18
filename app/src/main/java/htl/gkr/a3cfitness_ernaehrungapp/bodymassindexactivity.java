@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class bodymassindexactivity extends AppCompatActivity
@@ -20,6 +21,8 @@ public class bodymassindexactivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bodymassindex);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         bmiberechnen =(Button) findViewById(R.id.buttonbmiberechnen);
         textviewergebnissbmi=(TextView) findViewById(R.id.textviewergebnissbmi);
 

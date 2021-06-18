@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".MainActivity"
     android:background="#000000"
     android:orientation="vertical">
@@ -23,7 +24,7 @@
 
 
     <EditText
-        android:id="@+id/edittextinfo"
+        android:id="@+id/edittexternäinfo"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -42,7 +43,7 @@ android:hint="Was hast du gegessen?"
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/edittextgewicht"
+        android:id="@+id/in_date2"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="5dp"
         android:background="@color/white"
@@ -52,7 +53,7 @@ android:hint="Was hast du gegessen?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SELECT DATE"
-        android:id="@+id/btn_date"
+        android:id="@+id/btn_date2"
         android:layout_marginLeft="16dp"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
@@ -61,7 +62,7 @@ android:hint="Was hast du gegessen?"
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/edittextgroeße"
+        android:id="@+id/in_time2"
         android:layout_marginLeft="16dp"
         android:background="@color/white"
      />
@@ -71,7 +72,7 @@ android:hint="Was hast du gegessen?"
         android:layout_height="wrap_content"
         android:text="SELECT TIME"
         android:layout_marginLeft="16dp"
-        android:id="@+id/btn_time"
+        android:id="@+id/btn_time2"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
          />
@@ -95,7 +96,7 @@ android:hint="Was hast du gegessen?"
       />
 
     <Button
-        android:id="@+id/buttonhinufuegen"
+        android:id="@+id/buttonh"
         android:layout_width="match_parent"
         android:layout_height="50dp"
 android:backgroundTint="@color/white"
@@ -106,34 +107,42 @@ android:backgroundTint="@color/white"
         />
 
 
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="16dp"
         android:text="Aktuell gegessene Nahrungen"
-        android:gravity="center_horizontal" />
+
+
+        />
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_height="300dp"
         android:background="@color/white"
-        android:id="@+id/list1"
-
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="302dp" />
+        android:id="@+id/listfuerern"
+android:layout_below="@+id/textView3"
+         />
     <TextView
         android:id="@+id/textviewergenis"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="16dp"
+
+        android:layout_below="@+id/listfuerern"
         android:text="Gesamtkalorien:"
         android:gravity="center_horizontal" />
 
+</RelativeLayout>
 
 
 </LinearLayout>

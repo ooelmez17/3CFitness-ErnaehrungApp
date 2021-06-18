@@ -1,5 +1,6 @@
 package htl.gkr.a3cfitness_ernaehrungapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -29,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bodymassindex = findViewById(R.id.buttonbmi);
-        ernaehrungstipps = findViewById(R.id.buttonernaehrungstipps);
-        kalorienbedarf = findViewById(R.id.buttontagesbedarf);
-        traininhinzufuegen = findViewById(R.id.buttontraininghinzufuegen);
-        ernaehrung = findViewById(R.id.buttonernaehrung);
-        stepcounter = findViewById(R.id.stepcounter);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+        bodymassindex = (Button) findViewById(R.id.buttonbmi);
+        ernaehrungstipps = (Button) findViewById(R.id.buttonernaehrungstipps);
+        kalorienbedarf =(Button) findViewById(R.id.buttontagesbedarf);
+        traininhinzufuegen =(Button) findViewById(R.id.buttontraininghinzufuegen);
+        ernaehrung =(Button) findViewById(R.id.buttonernaehrung);
+        stepcounter = (TextView) findViewById(R.id.stepcounter);
 
         //..
 

@@ -33,8 +33,10 @@ public class bodymassindexactivity extends AppCompatActivity
                 gewicht = (EditText) findViewById(R.id.edittextgewichtbmi);
                 groeße= (EditText) findViewById(R.id.edittextgroeßebmi);
                 int gew = Integer.parseInt(gewicht.getText().toString());
-                int groeß = Integer.parseInt(groeße.getText().toString());
-                int bmiwert = gew / (groeß *  groeß);
+                double groeß = Double.parseDouble(groeße.getText().toString());
+                double bmiwert = gew / (groeß *  groeß);
+
+
                 String erg = String.valueOf(bmiwert);
                 textviewergebnissbmi.setText("BMI= "+erg);
             }

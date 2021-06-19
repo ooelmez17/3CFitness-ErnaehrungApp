@@ -2,14 +2,21 @@ package htl.gkr.a3cfitness_ernaehrungapp;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,15 +28,20 @@ public class MainActivity extends AppCompatActivity {
     Button kalorienbedarf;
     Button traininhinzufuegen;
     Button ernaehrung;
+    int test;
 
     TextView stepcounter;
     private double MagnitudePrevious = 0;
     private Integer stepCount = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         bodymassindex = (Button) findViewById(R.id.buttonbmi);
@@ -61,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         stepCount++;
                     }
                     stepcounter.setText("Steps: "+stepCount.toString());
+
                 }
             }
 
@@ -74,12 +87,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         bodymassindex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, bodymassindexactivity.class);
                 startActivity(intent);
+
+
             }
         });
 
@@ -115,6 +129,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        if(Build.VERSION.SDK_INT >=Build.VERSION_CODES.O)
+        {
+            NotificationChannel channel = new NotificationChannel("StepsNotification", "StepsNotification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        int steps = sharedPreferences.getInt("stepCount", 0);
+        if(steps>10000)
+        {
+            NotificationCompat.Builder builder= new NotificationCompat.Builder(MainActivity.this,"StepsNotification");
+            builder.setContentTitle("Congratulations");
+            builder.setContentText("You have reached 10.000 Steps");
+            builder.setSmallIcon(R.drawable.icongroesser);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity.this);
+            managerCompat.notify(1,builder.build());
+        }
+
+
+
     }
     protected void onPause() {
         super.onPause();
@@ -122,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
+
         editor.putInt("stepCount", stepCount);
         editor.apply();
     }
@@ -142,4 +181,5 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         stepCount = sharedPreferences.getInt("stepCount", 0);
     }
+
 }

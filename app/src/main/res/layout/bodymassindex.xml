@@ -46,7 +46,8 @@
             android:background="#FFFFFF"
             android:textColor="@color/black"
             android:text="Geschlecht:"
-            android:textSize="20dp"
+            android:textSize="18dp"
+            android:paddingTop="6dp"
             android:textColorHint="#636363"
 
 
@@ -160,7 +161,7 @@ android:textColorHint="@color/black"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text=""
-            android:textSize="60dp"
+            android:textSize="40dp"
             android:textAlignment="center"
             android:gravity="center"
 

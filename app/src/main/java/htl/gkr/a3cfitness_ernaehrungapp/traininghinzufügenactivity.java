@@ -33,6 +33,7 @@ public class traininghinzufügenactivity extends AppCompatActivity implements Vi
     ArrayAdapter<String> adapter;
     EditText trainingeingabe;
     Button traininghi;
+    String ozan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,12 +43,16 @@ public class traininghinzufügenactivity extends AppCompatActivity implements Vi
         trainingeingabe = (EditText) findViewById(R.id.edittexteingabetraining);
         traininghi = (Button) findViewById(R.id.buttontraininghinzufu);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,listtraining);
+        listViewtraining =(ListView) findViewById(R.id.listviewfürtraining);
+        listViewtraining.setAdapter(adapter);
       //  listViewtraining = (ListView) findViewById(R.id.listviewfürtraining);
      //   listViewtraining.setAdapter(adapter);
         btnDatePicker=(Button)findViewById(R.id.btn_date);
         btnTimePicker=(Button)findViewById(R.id.btn_time);
         txtDate=(EditText)findViewById(R.id.in_date);
         txtTime=(EditText)findViewById(R.id.in_time);
+
+
 
 
 
@@ -58,23 +63,26 @@ public class traininghinzufügenactivity extends AppCompatActivity implements Vi
         traininghi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //replaceFragment(new traininghinzufügenfragment());
-                if (savedInstanceState == null) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,
-                            new traininghinzufügenfragment()).commit();
+
+                if(trainingeingabe.getText().toString().equals("") || trainingeingabe.getText().toString() == null &&  tag == 0 || monat ==0|| jahr ==0|| stunde ==0|| minute ==0)
+                {
+                    Toast.makeText(traininghinzufügenactivity.this, "Bitte alle Felder ausfüllen", Toast.LENGTH_SHORT).show();
                 }
+                else
+                {
+                    traininghi = (Button) findViewById(R.id.buttontraininghinzufu);
+                    listtraining.add(trainingeingabe.getText().toString()+" "+tag+"/"+monat+"/"+jahr+" "+stunde+":"+minute);
+                    adapter.notifyDataSetChanged();
+                }
+
+
+
 
             }
         });
 
     }
 
-    private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container,fragment);
-        fragmentTransaction.commit();
-    }
 
     @Override
     public void onClick(View v) {

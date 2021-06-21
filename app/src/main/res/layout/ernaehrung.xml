@@ -57,6 +57,7 @@ android:hint="Was hast du gegessen?"
         android:layout_marginLeft="16dp"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
+
        />
 
     <EditText
@@ -75,6 +76,7 @@ android:hint="Was hast du gegessen?"
         android:id="@+id/btn_time2"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
+
          />
 
 
@@ -105,9 +107,20 @@ android:backgroundTint="@color/white"
         android:text="Hinzufügen"
 
         />
+    <Button
+        android:id="@+id/buttonalleeingabenlöschen"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+
+        android:text="Alle Eingaben löschen"
+
+        />
 
 
-<RelativeLayout
+
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -125,7 +138,7 @@ android:backgroundTint="@color/white"
         />
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:background="@color/white"
         android:id="@+id/listfuerern"
 android:layout_below="@+id/textView3"

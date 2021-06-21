@@ -21,14 +21,20 @@ public class ernaehrungstippsactivity extends AppCompatActivity
         setContentView(R.layout.ernaehrungsipps);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        listViewtipps = findViewById(R.id.listviewtipps);
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,listtipps);
-        listViewtipps.setAdapter(adapter);
-        listtipps.add("*Ernährung ist wichtiger als Training");
-        listtipps.add("*Achte auf eine ausgewogene Ernährung");
-        listtipps.add("*Um Muskel aufzubauen, musst du im Kalorienüberschuss sein");
-        listtipps.add("*Berechne deinen Tagesbedarf, um genau deinen Kalorienbedarf zu wissen");
-        listtipps.add("*Ernähre dich abwechslungsreich");
-        listtipps.add("*Übertreibe nicht das Konsum von Süssigkeiten und Fleisch");
+
+        if(savedInstanceState==null)
+        {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ernaehrungstippsfragment()).commit();
+        }
+    //    listViewtipps = findViewById(R.id.listviewtipps);
+    //    adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,listtipps);
+   //    listViewtipps.setAdapter(adapter);
+   //     listtipps.add("*Ernährung ist wichtiger als Training");
+    //    listtipps.add("*Achte auf eine ausgewogene Ernährung");
+     //   listtipps.add("*Um Muskel aufzubauen, musst du im Kalorienüberschuss sein");
+       // listtipps.add("*Berechne deinen Tagesbedarf, um genau deinen Kalorienbedarf zu wissen");
+       // listtipps.add("*Ernähre dich abwechslungsreich");
+       // listtipps.add("*Das Konsum von Süssigkeiten und Fleisch sollte nicht übertrieben werden");
+
     }
 }

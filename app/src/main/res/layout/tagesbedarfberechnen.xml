@@ -29,7 +29,7 @@
     android:layout_height="wrap_content">
     <TextView
         android:id="@+id/edittextinfo"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="13dp"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:hint="Geschlecht:"
@@ -37,7 +37,8 @@
         android:layout_marginRight="100dp"
         android:background="#FFFFFF"
         android:textSize="18dp"
-        android:paddingTop="6dp"
+        android:paddingTop="8dp"
+
 
         android:textColor="@color/black"
 
@@ -54,7 +55,8 @@
         android:shadowColor="@color/white"
         android:textColor="@color/white"
         android:layout_toRightOf="@+id/edittextinfo"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
 
 
         />
@@ -66,13 +68,13 @@
         android:shadowColor="@color/white"
         android:textColor="@color/white"
         android:layout_toRightOf="@+id/checkBoxMaennlich"
-
+        android:layout_marginTop="10dp"
         />
 </RelativeLayout>
     <TextView
         android:id="@+id/leerzeile2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="15dp"
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="16dp"

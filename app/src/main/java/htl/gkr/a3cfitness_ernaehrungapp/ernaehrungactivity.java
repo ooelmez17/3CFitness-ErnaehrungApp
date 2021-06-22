@@ -36,6 +36,7 @@ public class ernaehrungactivity extends AppCompatActivity implements View.OnClic
     ArrayAdapter<String> adapter2;
     Button alleeingabenlöschen;
     int counter=0;
+    int value =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,7 @@ public class ernaehrungactivity extends AppCompatActivity implements View.OnClic
         btnDatePicker2.setOnClickListener(this);
 
         btnTimePicker2.setOnClickListener(this);
+      /*
         if(counter>0)
         {
             SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
@@ -71,7 +73,7 @@ public class ernaehrungactivity extends AppCompatActivity implements View.OnClic
 
         }
 
-
+*/
         buttonh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,7 +117,7 @@ public class ernaehrungactivity extends AppCompatActivity implements View.OnClic
 
 
 
-                int value =0;
+
                 for(int val : li)
                 {
                     value+=val;
@@ -136,6 +138,9 @@ alleeingabenlöschen.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
 
        listernaehrung2.clear();
+       value =0;
+       li.clear();
+        texviewkaloriengesamt.setText("Gesamtkalorien: "+String.valueOf(value));
        adapter2.notifyDataSetChanged();
     }
 });

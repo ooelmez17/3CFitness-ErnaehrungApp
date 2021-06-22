@@ -20,6 +20,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Button kalorienbedarf;
     Button traininhinzufuegen;
     Button ernaehrung;
+    Button stepsreset;
     int test;
 
     TextView stepcounter;
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         traininhinzufuegen =(Button) findViewById(R.id.buttontraininghinzufuegen);
         ernaehrung =(Button) findViewById(R.id.buttonernaehrung);
         stepcounter = (TextView) findViewById(R.id.stepcounter);
+        stepsreset = (Button) findViewById(R.id.buttonreset);
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
         //..
 
@@ -71,7 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
                     if (MagnitudeDelta > 1) {
                         stepCount++;
+                    //    stepCount =0;
+                  //      stepCount= stepCount+10000;
                     }
+
                     stepcounter.setText("Steps: "+stepCount.toString());
 
                 }
@@ -83,6 +91,19 @@ public class MainActivity extends AppCompatActivity {
         };
 
         sensorManager.registerListener(stepDetector, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+        stepsreset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                stepCount = 0;
+                editor.putInt("stepCount", stepCount);
+                editor.apply();
+
+            }
+        });
 
 
 
@@ -138,9 +159,14 @@ public class MainActivity extends AppCompatActivity {
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+
         int steps = sharedPreferences.getInt("stepCount", 0);
-        if(steps>10000)
+
+
+     //   steps = 10000;
+
+
+        if(steps>=10000)
         {
             NotificationCompat.Builder builder= new NotificationCompat.Builder(MainActivity.this,"StepsNotification");
             builder.setContentTitle("Congratulations");
@@ -172,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
+
         editor.putInt("stepCount", stepCount);
         editor.apply();
     }

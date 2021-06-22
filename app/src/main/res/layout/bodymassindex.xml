@@ -40,14 +40,14 @@
             android:layout_marginTop="8dp"
             android:layout_width="197dp"
             android:layout_height="40dp"
-            android:hint="Was hast du gegessen?"
+            android:paddingTop="6dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="100dp"
             android:background="#FFFFFF"
             android:textColor="@color/black"
             android:text="Geschlecht:"
             android:textSize="18dp"
-            android:paddingTop="6dp"
+
             android:textColorHint="#636363"
 
 

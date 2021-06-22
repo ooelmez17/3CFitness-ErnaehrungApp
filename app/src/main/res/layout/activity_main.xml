@@ -104,7 +104,21 @@ android:backgroundTint="@color/white"
         android:layout_alignParentEnd="true"
 android:layout_alignParentBottom="true"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="8dp"
+        />
+    <Button
+        android:id="@+id/buttonreset"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:text="Reset Steps"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+
         />
 
 

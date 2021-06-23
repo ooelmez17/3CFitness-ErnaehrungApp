@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
                     MagnitudePrevious = Magnitude;
 
                     if (MagnitudeDelta > 1) {
-                        stepCount++;
-                        stepCount =0;
-                        stepCount= stepCount+10000;
+                      //  stepCount++;
+                     //   stepCount =0;
+                    //    stepCount= stepCount+10000;
                     }
 
                     stepcounter.setText("Steps: "+stepCount.toString());
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         int steps = sharedPreferences.getInt("stepCount", 0);
 
 
-       steps = 10000;
+     //  steps = 10000;
 
 
         if(steps>=10000)

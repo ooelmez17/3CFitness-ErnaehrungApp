@@ -31,7 +31,7 @@ public class tagesbedarfberechnenactivity extends AppCompatActivity
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-    //  String  alterzahl = alter.getText().toString();
+
        tagesbedarfberechnenbutton =(Button) findViewById(R.id.buttontagesbedarfberechnen);
 
        textviewergebniskalorien = (TextView) findViewById(R.id.textviewergebnisskalorienbedarf);
@@ -40,8 +40,7 @@ public class tagesbedarfberechnenactivity extends AppCompatActivity
 
 
 
-       //  gewichtzahl = Integer.parseInt(gewicht.getText().toString());
-        // groeßezahl = Integer.parseInt(groeße.getText().toString());
+
 
 
 
@@ -97,10 +96,6 @@ public class tagesbedarfberechnenactivity extends AppCompatActivity
 
 
 
-             //    int alterzahl= Integer.parseInt(alter.getText().toString());
-              //  int  gewichtzahl = Integer.parseInt(gewicht.getText().toString());
-              //  int groeßezahl = Integer.parseInt(groeße.getText().toString());
-               //  textviewergebniskalorien.setText("Dein Tagesbedarf ist "+String.valueOf(erg));
             }
         });
     }

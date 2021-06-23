@@ -14,15 +14,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
-public class traininghinzufügenactivity extends AppCompatActivity implements View.OnClickListener
+public class traininghinzufuegenactivity extends AppCompatActivity implements View.OnClickListener
 {
     Button btnDatePicker, btnTimePicker;
     EditText txtDate, txtTime;
@@ -33,7 +29,7 @@ public class traininghinzufügenactivity extends AppCompatActivity implements Vi
     ArrayAdapter<String> adapter;
     EditText trainingeingabe;
     Button traininghi;
-    String ozan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +62,7 @@ public class traininghinzufügenactivity extends AppCompatActivity implements Vi
 
                 if(trainingeingabe.getText().toString().equals("") || trainingeingabe.getText().toString() == null &&  tag == 0 || monat ==0|| jahr ==0|| stunde ==0|| minute ==0)
                 {
-                    Toast.makeText(traininghinzufügenactivity.this, "Bitte alle Felder ausfüllen", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(traininghinzufuegenactivity.this, "Bitte alle Felder ausfüllen", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {

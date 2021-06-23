@@ -2,7 +2,6 @@ package htl.gkr.a3cfitness_ernaehrungapp;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +27,7 @@ public class ernaehrungactivity extends AppCompatActivity implements View.OnClic
     private int jahr2, monat2, tag2, stunde2, minute2;
     private String timeFormat2;
     EditText edittextkalorien;
-    Button buttonh;
+    Button buttonernaehrunghinzufuegen;
     ListView listfuerern;
     TextView texviewkaloriengesamt;
     Button btnDatePicker2, btnTimePicker2;
@@ -46,7 +45,7 @@ public class ernaehrungactivity extends AppCompatActivity implements View.OnClic
         actionBar.hide();
         edittextinfo = findViewById(R.id.edittexternäinfo);
         edittextkalorien = findViewById(R.id.edittextkalorien);
-        buttonh = findViewById(R.id.buttonh);
+        buttonernaehrunghinzufuegen = findViewById(R.id.buttonh);
         alleeingabenlöschen = findViewById(R.id.buttonalleeingabenlöschen);
         listfuerern = findViewById(R.id.listfuerern);
         texviewkaloriengesamt = findViewById(R.id.textviewergenis);
@@ -74,7 +73,7 @@ public class ernaehrungactivity extends AppCompatActivity implements View.OnClic
         }
 
 */
-        buttonh.setOnClickListener(new View.OnClickListener() {
+        buttonernaehrunghinzufuegen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

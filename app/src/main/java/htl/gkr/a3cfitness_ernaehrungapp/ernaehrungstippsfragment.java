@@ -24,7 +24,7 @@ public class ernaehrungstippsfragment extends Fragment
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        String[]  city = {"*Ernährung ist wichtiger als Training","*Achte auf eine ausgewogene Ernährung","*Um Muskel aufzubauen, musst du im Kalorienüberschuss sein","*Berechne deinen Tagesbedarf, um genau deinen Kalorienbedarf zu wissen","*Ernähre dich abwechslungsreich","*Das Konsum von Süssigkeiten und Fleisch sollte nicht übertrieben werden"};
+        String[]  city = {"*Ernährung ist wichtiger als Training.","*Achte auf eine ausgewogene Ernährung.","*Um Muskel aufzubauen, musst du im Kalorienüberschuss sein.","*Berechne deinen Tagesbedarf, um genau deinen Kalorienbedarf zu wissen.","*Ernähre dich abwechslungsreich.","*Das Konsum von Süssigkeiten und Fleisch sollte nicht übertrieben werden."};
 
         ListView listView=(ListView)view.findViewById(R.id.listviewernährungstipps);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,city);

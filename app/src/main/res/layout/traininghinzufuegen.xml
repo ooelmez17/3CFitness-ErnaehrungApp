@@ -88,9 +88,23 @@ android:hint="Training eingeben:"
         />
 
 
+ <Button
+     android:id="@+id/buttontraininglöschen"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:backgroundTint="@color/white"
+     android:textColor="@color/black"
+
+     android:text="Alle Einträge löschen"
+
+     />
 
 
-    <TextView
+
+
+
+
+ <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

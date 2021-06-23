@@ -29,7 +29,7 @@ public class traininghinzufuegenactivity extends AppCompatActivity implements Vi
     ArrayAdapter<String> adapter;
     EditText trainingeingabe;
     Button traininghi;
-
+ Button buttontraininglöschen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +48,7 @@ public class traininghinzufuegenactivity extends AppCompatActivity implements Vi
         txtDate=(EditText)findViewById(R.id.in_date);
         txtTime=(EditText)findViewById(R.id.in_time);
 
-
-
+buttontraininglöschen = (Button) findViewById(R.id.buttontraininglöschen);
 
 
         btnDatePicker.setOnClickListener(this);
@@ -73,6 +72,14 @@ public class traininghinzufuegenactivity extends AppCompatActivity implements Vi
 
 
 
+
+            }
+        });
+        buttontraininglöschen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listtraining.clear();
+                adapter.notifyDataSetChanged();
 
             }
         });
